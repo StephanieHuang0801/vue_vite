@@ -33,7 +33,7 @@ export default defineComponent({
       // arr是要禁用的节点集
       arr.forEach((item: any) => {
         item.disabled = flag;
-        state.casVal.reverse();
+        refCas.value.togglePopperVisible(true)
         if (flag == true) {
           // 禁用的同时，如果禁用的item的父节点被选中，要把子节点同步清空
           let currentValue = state.casVal.map((item: any) => {
